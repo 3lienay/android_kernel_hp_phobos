@@ -121,7 +121,7 @@
 		reg-shift = <2>;
 		interrupts = <0 36 0x04>;
 		nvidia,dma-request-selector = <&apbdma 8>;
-		status = "disabled";
+		status = "okay";
 		clocks = <&tegra_car 6>;
 	};
 

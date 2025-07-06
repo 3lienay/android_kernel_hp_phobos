@@ -3,14 +3,19 @@
 /include/ "tegra114.dtsi"
 
 / {
-	model = "NVIDIA Tegra114 Dalmore evaluation board";
-	compatible = "nvidia,dalmore", "nvidia,tegra114";
 
-	memory {
-		reg = <0x80000000 0x40000000>;
-	};
+        model = "NVIDIA Tegra114 Dalmore evaluation board";
+        compatible = "nvidia,dalmore", "nvidia,tegra114";
 
-	pinmux {
+        chosen {
+                bootargs = "console=ttyS0,115200n8 root=/dev/mmcblk0p2 rw init=/init";
+        };
+
+        memory {
+                reg = <0x80000000 0x40000000>;
+        };
+
+        pinmux {
 		pinctrl-names = "default";
 		pinctrl-0 = <&state_default>;
 
